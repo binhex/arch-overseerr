@@ -1,6 +1,6 @@
 **Application**
 
-[Overseerr](https://github.com/overseerr/Overseerr)
+[Overseerr](https://github.com/sct/overseerr)
 
 **Description**
 
