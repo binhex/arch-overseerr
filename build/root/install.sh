@@ -109,6 +109,19 @@ sed -i '/# PERMISSIONS_PLACEHOLDER/{
 }' /usr/local/bin/init.sh
 rm /tmp/permissions_heredoc
 
+# set softlink to /config, need to do this here as it must be run as root
+cat <<EOF > /tmp/config_heredoc
+# softlink to /config
+source '/usr/local/bin/utils.sh' && symlink --src-path '/usr/lib/overseerr/config' --dst-path '/config/overseerr' --link-type 'softlink' --log-level 'WARN'
+EOF
+
+# replace config placeholder string with contents of file (here doc)
+sed -i '/# CONFIG_PLACEHOLDER/{
+    s/# CONFIG_PLACEHOLDER//g
+    r /tmp/config_heredoc
+}' /usr/local/bin/init.sh
+rm /tmp/config_heredoc
+
 # env vars
 ####
 
