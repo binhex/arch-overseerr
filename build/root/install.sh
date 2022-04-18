@@ -58,7 +58,7 @@ source aur.sh
 ####
 
 # define comma separated string of install paths
-install_paths="/usr/lib/overseerr,/home/nobody"
+install_paths="/usr/lib/overseerr,/var/lib/overseerr,/home/nobody"
 
 # split comma separated string into list for install paths
 IFS=',' read -ra install_paths_list <<< "${install_paths}"
