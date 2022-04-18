@@ -15,7 +15,6 @@ Latest development build of Overseerr from Arch Linux AUR.
 docker run -d \
     -p 5055:5055 \
     --name=<container name> \
-    -v <path for media files>:/media \
     -v <path for config files>:/config \
     -v /etc/localtime:/etc/localtime:ro \
     -e UMASK=<umask for created files> \
@@ -35,7 +34,6 @@ Please replace all user variables in the above command defined by <> with the co
 docker run -d \
     -p 5055:5055 \
     --name=overseerr \
-    -v /media/tv:/media \
     -v /apps/docker/overseerr:/config \
     -v /etc/localtime:/etc/localtime:ro \
     -e UMASK=000 \
