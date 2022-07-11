@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/dumb-init /bin/bash
 
 # source in env (listen ip and port)
 source '/etc/conf.d/overseerr'
