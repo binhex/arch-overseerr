@@ -94,7 +94,7 @@ EOF
 sed -i '/# PERMISSIONS_PLACEHOLDER/{
     s/# PERMISSIONS_PLACEHOLDER//g
     r /tmp/permissions_heredoc
-}' /usr/local/bin/init.sh
+}' /usr/local/bin/shell/docker/init.sh
 rm /tmp/permissions_heredoc
 
 # set softlink to /config, need to do this here as it must be run as root
@@ -107,7 +107,7 @@ EOF
 sed -i '/# CONFIG_PLACEHOLDER/{
     s/# CONFIG_PLACEHOLDER//g
     r /tmp/config_heredoc
-}' /usr/local/bin/init.sh
+}' /usr/local/bin/shell/docker/init.sh
 rm /tmp/config_heredoc
 
 # env vars
