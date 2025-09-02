@@ -60,6 +60,13 @@ aur_packages="overseerr"
 # call aur install script (arch user repo)
 source aur.sh
 
+# custom
+####
+# temporary fix for issue https://github.com/sct/overseerr/issues/4230
+# delme on release > v1.34.0
+sed -i 's#https://metadata.provider.plex.tv#https://discover.provider.plex.tv#g' '/usr/lib/overseerr/dist/api/plextv.js'
+sed -i 's#https://metadata.provider.plex.tv#https://discover.provider.plex.tv#g' '/usr/lib/overseerr/server/api/plextv.ts'
+
 # container perms
 ####
 
