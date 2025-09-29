@@ -125,7 +125,7 @@ rm /tmp/permissions_heredoc
 # set softlink to /config, need to do this here as it must be run as root
 cat <<EOF > /tmp/config_heredoc
 # softlink to /config
-source 'utils.sh' && symlink --src-path '/usr/lib/overseerr/config' --dst-path '/config/overseerr' --link-type 'softlink'
+source 'utils.sh' && symlink --src-path '/config/overseerr' --dst-path '/usr/lib/overseerr/config' --link-type 'softlink'
 EOF
 
 # replace config placeholder string with contents of file (here doc)
