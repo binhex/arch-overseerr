@@ -40,7 +40,7 @@ refresh.sh
 ####
 
 # define pacman packages
-pacman_packages=""
+pacman_packages="nodejs-lts-krypton"
 
 # install compiled packages using pacman
 if [[ -n "${pacman_packages}" ]]; then
